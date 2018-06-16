@@ -7,6 +7,10 @@ extends Node
 var makeNew = false
 var cameraPos = Vector2(0,0)
 var hasTouched = false
+
+var score
+
+
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here

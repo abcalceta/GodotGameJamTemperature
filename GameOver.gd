@@ -7,6 +7,7 @@ extends Node2D
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
+	$Label.text = "Score: "+str(globals.score)
 	pass
 
 #func _process(delta):
@@ -22,3 +23,10 @@ func _on_TextureButton_pressed():
 
 func _on_quit_pressed():
 	get_tree().quit()
+
+
+func _on_quit_mouse_entered():
+	$buttonSound.play()
+	
+func _on_TextureButton_mouse_entered():
+	$buttonSound.play()

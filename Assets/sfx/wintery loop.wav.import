@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/wintery loop.wav-d97708bfc8d0af1e4aa995834f3d1417.sample"
+
+[deps]
+
+source_file="res://Assets/sfx/wintery loop.wav"
+source_md5="11c31daf6ef1838336781ca5e5bc8a98"
+
+dest_files=[ "res://.import/wintery loop.wav-d97708bfc8d0af1e4aa995834f3d1417.sample" ]
+dest_md5="f47d590775e21a27befa4173a490fee1"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=true
+compress/mode=0

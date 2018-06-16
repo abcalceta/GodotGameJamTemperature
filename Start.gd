@@ -21,6 +21,13 @@ func _on_Start_pressed():
 func _on_Quit_pressed():
 	get_tree().quit()
 
-
 func _on_Instructions_pressed():
 	get_tree().change_scene("res://Instructions.tscn")
+
+
+func _on_Start_mouse_entered():
+	$buttonSound.play()
+func _on_Instructions_mouse_entered():
+	$buttonSound.play()
+func _on_Quit_mouse_entered():
+	$buttonSound.play()

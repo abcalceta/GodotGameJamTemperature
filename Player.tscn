@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://Assets/player1/p3_duck.png" type="Texture" id=2]
@@ -16,6 +16,8 @@
 [ext_resource path="res://Assets/player1/p3_walk11.png" type="Texture" id=14]
 [ext_resource path="res://Assets/player1/p3_hurt.png" type="Texture" id=15]
 [ext_resource path="res://Assets/player1/p3_stand.png" type="Texture" id=16]
+[ext_resource path="res://Assets/sfx/footstep00.wav" type="AudioStream" id=17]
+[ext_resource path="res://Assets/sfx/jumpland.wav" type="AudioStream" id=18]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -78,6 +80,11 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 0.550781, 0.694672, 1, 0 ) ]
 }
 
+[sub_resource type="AudioStreamRandomPitch" id=4]
+
+audio_stream = ExtResource( 17 )
+random_pitch = 1.1
+
 [node name="Player" type="KinematicBody2D"]
 
 z_index = 5
@@ -95,7 +102,8 @@ shape = SubResource( 1 )
 [node name="PlayerSprite" type="AnimatedSprite" parent="." index="1"]
 
 frames = SubResource( 2 )
-animation = "die"
+animation = "walk"
+frame = 4
 playing = true
 _sections_unfolded = [ "Transform", "Visibility" ]
 
@@ -108,5 +116,27 @@ playback_default_blend_time = 0.0
 playback_speed = 1.0
 anims/die = SubResource( 3 )
 blend_times = [  ]
+
+[node name="walkSound" type="AudioStreamPlayer2D" parent="." index="3"]
+
+stream = SubResource( 4 )
+volume_db = 0.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="jumpSound" type="AudioStreamPlayer2D" parent="." index="4"]
+
+stream = ExtResource( 18 )
+volume_db = 0.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[connection signal="finished" from="walkSound" to="." method="_on_walkSound_finished"]
 
 

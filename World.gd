@@ -6,15 +6,14 @@ extends Node2D
 
 func _ready():
 	globals.hasTouched = false
+	globals.score = 0
 	$Player.position.x = 1024/2
 	# Called every time the node is added to the scene.
 	# Initialization here
 	pass
 
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
+func _process(delta):
+	$ParallaxBackground/Score.text = "Score: "+str(globals.score)
 
 
 func _on_Player_fallen():

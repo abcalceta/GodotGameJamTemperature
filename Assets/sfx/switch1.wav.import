@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/switch1.wav-5c06a0006093297a1fbf4abf681f38de.sample"
+
+[deps]
+
+source_file="res://Assets/sfx/switch1.wav"
+source_md5="1bf42d6944fa93da157caa0cc275c045"
+
+dest_files=[ "res://.import/switch1.wav-5c06a0006093297a1fbf4abf681f38de.sample" ]
+dest_md5="4b9c71b9a74e64cfaaedc4c1fb1f1d94"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

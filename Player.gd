@@ -9,6 +9,8 @@ var gravity = 9.8 * 8
 var acceleration = 0
 var onGround = false
 
+var donePlayingWalkSound = true
+
 signal fallen
 
 
@@ -38,6 +40,9 @@ func _process(delta):
 			$PlayerSprite.play("idle")
 		else:
 			$PlayerSprite.play("walk")
+			if donePlayingWalkSound:
+				$walkSound.play()
+				donePlayingWalkSound = false
 		
 	else: 
 		onGround = false
@@ -54,6 +59,7 @@ func _input(event):
 func jump():
 	$PlayerSprite.play("jump")
 	if onGround:
+		$jumpSound.play()
 		print("jump")
 		acceleration = -gravity * 20
 		
@@ -64,3 +70,6 @@ func _on_Area2D_body_entered(body):
 
 func fallingFadeOut():
 	$AnimationPlayer.play("die")
+
+func _on_walkSound_finished():
+	donePlayingWalkSound = true

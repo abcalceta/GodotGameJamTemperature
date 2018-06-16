@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Instructions.gd" type="Script" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Assets/textureButtons/start_normal.png" type="Texture" id=4]
 [ext_resource path="res://Assets/textureButtons/start_hover.png" type="Texture" id=5]
 [ext_resource path="res://Assets/ShortStack-Regular.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Assets/sfx/switch1.wav" type="AudioStream" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -103,6 +104,16 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="buttonSound" type="AudioStreamPlayer" parent="." index="5"]
+
+stream = ExtResource( 7 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[connection signal="mouse_entered" from="TextureButton" to="." method="_on_TextureButton_mouse_entered"]
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
 

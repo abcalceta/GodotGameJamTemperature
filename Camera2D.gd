@@ -18,6 +18,7 @@ func _process(delta):
 	
 	
 	globals.cameraPos = position
+	globals.score = abs(round(globals.cameraPos.y))
 	
 	if Input.is_action_pressed("ui_up"):
 		position.y -= 10
