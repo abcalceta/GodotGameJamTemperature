@@ -11,9 +11,11 @@ var speed = 2
 var currentAnimationTime = 0
 
 func _ready():
+	if randi()%2 == 0:
+		speed *= -1
 	randomize()
 	isChosen = false
-	if randi()%5==0:
+	if randi()%3==0:
 		isMoving = true
 	# Called every time the node is added to the scene.
 	# Initialization here
@@ -25,6 +27,8 @@ func _process(delta):
 		if position.x > (1024-200) or  position.x < 150:
 			speed *= -1
 		
+	if isChosen == false:
+		$AnimationPlayer.stop()
 
 
 func _on_VisibilityNotifier2D_viewport_exited(viewport):
@@ -35,7 +39,9 @@ func _on_VisibilityNotifier2D_viewport_exited(viewport):
 
 func _on_Area2D_body_entered(body):
 	if body.get_name() == "Player":
+		globals.hasTouched = true
 		print("platform chosen")
+		$Particles2D.emitting = true
 		isChosen = true
 		$Timer.start()
 		if alreadyPlaying:
@@ -43,9 +49,11 @@ func _on_Area2D_body_entered(body):
 			$AnimationPlayer.seek(currentAnimationTime,true)
 
 func _on_Area2D_body_exited(body):
-	print("platform not chosen")
-	$AnimationPlayer.stop()
-	isChosen = false
+	if body.get_name() == "Player":
+		print("platform not chosen")
+		$Particles2D.emitting = false
+		$AnimationPlayer.stop()
+		isChosen = false
 	
 func _on_Timer_timeout():
 	if not alreadyPlaying:

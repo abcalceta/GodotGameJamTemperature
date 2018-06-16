@@ -10,8 +10,13 @@ func _ready():
 	pass
 
 func _process(delta):
+	var pastPos = position.y
+	if (position.y - (get_parent().get_node("Player").position.y  - 350))>0 and globals.hasTouched:
+		var goal = get_parent().get_node("Player").position.y  - 350
+		
+		position.y = position.y + (goal - position.y)*0.08
 	
-	position.y = get_parent().get_node("Player").position.y  - 300
+	
 	globals.cameraPos = position
 	
 	if Input.is_action_pressed("ui_up"):

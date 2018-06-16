@@ -4,10 +4,14 @@ extends Node2D
 # var a = 2
 # var b = "textvar"
 
-var mousePos = Vector2(0,0)
+var mousePos = Vector2(1024/2,0)
 var gravity = 9.8 * 8
 var acceleration = 0
 var onGround = false
+
+signal fallen
+
+
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
@@ -16,6 +20,7 @@ func _ready():
 func _process(delta):
 	# Called every frame. Delta is time since last frame.
 	# Update game logic here.
+	
 	
 	var pointingTo = (mousePos - global_position)*5
 	
@@ -32,7 +37,7 @@ func _input(event):
 	if Input.is_action_pressed("jump"):
 		#print("Mouse Click/Unclick at: ", event.position)
 		jump()
-	elif event is InputEventMouseMotion:
+	if event is InputEventMouseMotion:
 		#print("Mouse Motion at: ", event.position)
 		mousePos = event.position
 		
@@ -41,3 +46,7 @@ func jump():
 		print("jump")
 		acceleration = -gravity * 20
 		
+
+func _on_Area2D_body_entered(body):
+	if body == self:
+		emit_signal("fallen")
