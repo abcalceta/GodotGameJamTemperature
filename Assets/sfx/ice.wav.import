@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ice.wav-2edb56db725c5cfac96b8c00c6a2774b.sample"
+
+[deps]
+
+source_file="res://Assets/sfx/ice.wav"
+source_md5="944827eaf1551599384020ef13570872"
+
+dest_files=[ "res://.import/ice.wav-2edb56db725c5cfac96b8c00c6a2774b.sample" ]
+dest_md5="67bb372eac4db1ddc6caaa0bec21a8fd"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Platform.gd" type="Script" id=1]
 [ext_resource path="res://Assets/iceBlockHalf.png" type="Texture" id=2]
+[ext_resource path="res://soundEffect.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -96,6 +97,10 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Angular Velocity", "Color", "Emission Shape", "Resource" ]
 
+[sub_resource type="AudioStreamRandomPitch" id=7]
+
+random_pitch = 1.1
+
 [node name="Platform" type="KinematicBody2D"]
 
 input_pickable = false
@@ -181,6 +186,17 @@ z_index = 1
 texture = ExtResource( 2 )
 centered = false
 _sections_unfolded = [ "Offset", "Transform", "Visibility" ]
+
+[node name="soundEffect" type="AudioStreamPlayer2D" parent="." index="7"]
+
+stream = SubResource( 7 )
+volume_db = 0.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+script = ExtResource( 3 )
 
 [connection signal="viewport_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_viewport_exited"]
 

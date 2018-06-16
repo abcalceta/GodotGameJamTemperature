@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ground.png-d6215276157ad844710057a2579c5395.stex"
+path="res://.import/start_hover.png-245885c037c686d87954cb40e0fd23e0.stex"
 
 [deps]
 
-source_file="res://Assets/ground.png"
-source_md5="7dddecd5074cd6879824622577ef62c3"
+source_file="res://Assets/textureButtons/start_hover.png"
+source_md5="9bc449e9bdb3f45887e2bbfd7e223aea"
 
-dest_files=[ "res://.import/ground.png-d6215276157ad844710057a2579c5395.stex" ]
-dest_md5="f2ef55fced73e6fb8703af8df89cf4a0"
+dest_files=[ "res://.import/start_hover.png-245885c037c686d87954cb40e0fd23e0.stex" ]
+dest_md5="4f95ef2b859dc78be0e354f08473f701"
 
 [params]
 
@@ -18,9 +18,9 @@ compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
-flags/repeat=1
+flags/repeat=0
 flags/filter=true
-flags/mipmaps=true
+flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true

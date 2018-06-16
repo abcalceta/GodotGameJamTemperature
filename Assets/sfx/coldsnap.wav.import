@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/coldsnap.wav-97cad9e694aa99d9da9bb9e29db7cc41.sample"
+
+[deps]
+
+source_file="res://Assets/sfx/coldsnap.wav"
+source_md5="637f6b76edfe96b1656810efdbf784bb"
+
+dest_files=[ "res://.import/coldsnap.wav-97cad9e694aa99d9da9bb9e29db7cc41.sample" ]
+dest_md5="01eefa4c5b6948a3137840e9481b2431"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

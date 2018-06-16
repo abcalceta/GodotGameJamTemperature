@@ -22,7 +22,9 @@ func _process(delta):
 	# Update game logic here.
 	
 	var pointingTo = (mousePos - global_position)*5
-	if pointingTo.x > 0:
+	if abs(pointingTo.x) < 5:
+		pass
+	elif pointingTo.x > 0:
 		$PlayerSprite.scale.x = 1
 	else:
 		$PlayerSprite.scale.x = -1
@@ -31,7 +33,12 @@ func _process(delta):
 	if is_on_wall():
 		onGround = true
 		acceleration = 0
-		$PlayerSprite.play("walk")
+		
+		if abs(pointingTo.x) < 50:
+			$PlayerSprite.play("idle")
+		else:
+			$PlayerSprite.play("walk")
+		
 	else: 
 		onGround = false
 
@@ -54,3 +61,6 @@ func jump():
 func _on_Area2D_body_entered(body):
 	if body == self:
 		emit_signal("fallen")
+
+func fallingFadeOut():
+	$AnimationPlayer.play("die")

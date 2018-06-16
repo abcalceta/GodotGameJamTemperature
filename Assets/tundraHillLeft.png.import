@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ground.png-d6215276157ad844710057a2579c5395.stex"
+path="res://.import/tundraHillLeft.png-f2e4395fa608728a545fd36d378f26be.stex"
 
 [deps]
 
-source_file="res://Assets/ground.png"
-source_md5="7dddecd5074cd6879824622577ef62c3"
+source_file="res://Assets/tundraHillLeft.png"
+source_md5="c4bdafdf432090601defc7cb2303d900"
 
-dest_files=[ "res://.import/ground.png-d6215276157ad844710057a2579c5395.stex" ]
-dest_md5="f2ef55fced73e6fb8703af8df89cf4a0"
+dest_files=[ "res://.import/tundraHillLeft.png-f2e4395fa608728a545fd36d378f26be.stex" ]
+dest_md5="6da1744388672d6d8ef2e4823d50d6ef"
 
 [params]
 
@@ -18,9 +18,9 @@ compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
-flags/repeat=1
+flags/repeat=0
 flags/filter=true
-flags/mipmaps=true
+flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true

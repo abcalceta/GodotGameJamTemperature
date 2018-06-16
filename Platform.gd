@@ -41,6 +41,7 @@ func _on_Area2D_body_entered(body):
 	if body.get_name() == "Player":
 		globals.hasTouched = true
 		print("platform chosen")
+		$soundEffect.play()
 		$Particles2D.emitting = true
 		isChosen = true
 		$Timer.start()

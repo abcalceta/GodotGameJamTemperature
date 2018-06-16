@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ground.png-d6215276157ad844710057a2579c5395.stex"
+path="res://.import/cloud3.png-ff734c0d793896d132a7bb4c7b7bdd4a.stex"
 
 [deps]
 
-source_file="res://Assets/ground.png"
-source_md5="7dddecd5074cd6879824622577ef62c3"
+source_file="res://Assets/cloud/cloud3.png"
+source_md5="e59fb9bad502c957a1f5445951498221"
 
-dest_files=[ "res://.import/ground.png-d6215276157ad844710057a2579c5395.stex" ]
-dest_md5="f2ef55fced73e6fb8703af8df89cf4a0"
+dest_files=[ "res://.import/cloud3.png-ff734c0d793896d132a7bb4c7b7bdd4a.stex" ]
+dest_md5="75033899d973bb1ffca0e76e70c17021"
 
 [params]
 
@@ -18,9 +18,9 @@ compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
-flags/repeat=1
+flags/repeat=0
 flags/filter=true
-flags/mipmaps=true
+flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true

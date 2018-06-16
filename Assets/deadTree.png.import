@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ground.png-d6215276157ad844710057a2579c5395.stex"
+path="res://.import/deadTree.png-c082d67a64cfe196e67d1d6c127ccdd3.stex"
 
 [deps]
 
-source_file="res://Assets/ground.png"
-source_md5="7dddecd5074cd6879824622577ef62c3"
+source_file="res://Assets/deadTree.png"
+source_md5="a8101e8b6a9d0d7b4c07d89d55a4fd9f"
 
-dest_files=[ "res://.import/ground.png-d6215276157ad844710057a2579c5395.stex" ]
-dest_md5="f2ef55fced73e6fb8703af8df89cf4a0"
+dest_files=[ "res://.import/deadTree.png-c082d67a64cfe196e67d1d6c127ccdd3.stex" ]
+dest_md5="34531d6badf2061c1806d45ea816c259"
 
 [params]
 
@@ -18,9 +18,9 @@ compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
-flags/repeat=1
+flags/repeat=0
 flags/filter=true
-flags/mipmaps=true
+flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true

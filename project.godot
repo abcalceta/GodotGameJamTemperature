@@ -11,7 +11,7 @@ config_version=3
 [application]
 
 config/name="Godot Jam Temperature"
-run/main_scene="res://World.tscn"
+run/main_scene="res://Start.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -30,4 +30,5 @@ jump=[ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_na
 
 [rendering]
 
+environment/default_clear_color=Color( 0.855469, 0.955963, 1, 1 )
 environment/default_environment="res://default_env.tres"

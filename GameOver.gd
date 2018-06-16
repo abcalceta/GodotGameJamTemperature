@@ -5,8 +5,6 @@ extends Node2D
 # var b = "textvar"
 
 func _ready():
-	globals.hasTouched = false
-	$Player.position.x = 1024/2
 	# Called every time the node is added to the scene.
 	# Initialization here
 	pass
@@ -17,10 +15,10 @@ func _ready():
 #	pass
 
 
-func _on_Player_fallen():
-	print("fallen")
-	$Player.fallingFadeOut()
-	$GameOverSinkIn.start()
-	
-func _on_GameOverSinkIn_timeout():
-	get_tree().change_scene("res://GameOver.tscn")
+func _on_TextureButton_pressed():
+	get_tree().change_scene("res://Main.tscn")
+
+
+
+func _on_quit_pressed():
+	get_tree().quit()
