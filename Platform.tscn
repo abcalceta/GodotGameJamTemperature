@@ -96,7 +96,7 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Angular Velocity", "Color", "Emission Shape", "Resource" ]
 
-[node name="Platform" type="KinematicBody2D" index="0"]
+[node name="Platform" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1

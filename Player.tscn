@@ -1,7 +1,19 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
-[ext_resource path="res://Assets/player1/p1_front.png" type="Texture" id=2]
+[ext_resource path="res://Assets/player1/p3_walk01.png" type="Texture" id=2]
+[ext_resource path="res://Assets/player1/p3_walk02.png" type="Texture" id=3]
+[ext_resource path="res://Assets/player1/p3_walk03.png" type="Texture" id=4]
+[ext_resource path="res://Assets/player1/p3_walk04.png" type="Texture" id=5]
+[ext_resource path="res://Assets/player1/p3_walk05.png" type="Texture" id=6]
+[ext_resource path="res://Assets/player1/p3_walk06.png" type="Texture" id=7]
+[ext_resource path="res://Assets/player1/p3_walk07.png" type="Texture" id=8]
+[ext_resource path="res://Assets/player1/p3_walk08.png" type="Texture" id=9]
+[ext_resource path="res://Assets/player1/p3_walk09.png" type="Texture" id=10]
+[ext_resource path="res://Assets/player1/p3_walk10.png" type="Texture" id=11]
+[ext_resource path="res://Assets/player1/p3_walk11.png" type="Texture" id=12]
+[ext_resource path="res://Assets/player1/p3_duck.png" type="Texture" id=13]
+[ext_resource path="res://Assets/player1/p3_jump.png" type="Texture" id=14]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -9,7 +21,22 @@ custom_solver_bias = 0.0
 radius = 30.2427
 height = 32.1202
 
-[node name="Player" type="KinematicBody2D"]
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "walk",
+"speed": 24.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 3 ), ExtResource( 14 ) ],
+"loop": false,
+"name": "jump",
+"speed": 24.0
+} ]
+_sections_unfolded = [ "Resource" ]
+
+[node name="Player" type="KinematicBody2D" index="0"]
 
 z_index = 5
 input_pickable = false
@@ -19,13 +46,16 @@ collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Z Index" ]
 
-[node name="PlayerSprite" type="Sprite" parent="." index="0"]
-
-texture = ExtResource( 2 )
-_sections_unfolded = [ "Animation", "Offset", "Region" ]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
 shape = SubResource( 1 )
+
+[node name="PlayerSprite" type="AnimatedSprite" parent="." index="1"]
+
+frames = SubResource( 2 )
+animation = "walk"
+frame = 7
+playing = true
+_sections_unfolded = [ "Transform" ]
 
 

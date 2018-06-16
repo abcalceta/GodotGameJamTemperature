@@ -21,14 +21,17 @@ func _process(delta):
 	# Called every frame. Delta is time since last frame.
 	# Update game logic here.
 	
-	
 	var pointingTo = (mousePos - global_position)*5
-	
+	if pointingTo.x > 0:
+		$PlayerSprite.scale.x = 1
+	else:
+		$PlayerSprite.scale.x = -1
 	acceleration += gravity
 	var result = move_and_slide(Vector2(pointingTo.x,acceleration))
 	if is_on_wall():
 		onGround = true
 		acceleration = 0
+		$PlayerSprite.play("walk")
 	else: 
 		onGround = false
 
@@ -42,6 +45,7 @@ func _input(event):
 		mousePos = event.position
 		
 func jump():
+	$PlayerSprite.play("jump")
 	if onGround:
 		print("jump")
 		acceleration = -gravity * 20
